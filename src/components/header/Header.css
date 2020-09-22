@@ -1,0 +1,32 @@
+header {
+  background-color: #096ee3;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 50px;
+}
+
+h1 {
+  color: white;
+  line-height: 50px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+p {
+  visibility: hidden;
+  width: 30px;
+  height: 20px;
+  background-color: #dc3545;
+  border-radius: 10px;
+}

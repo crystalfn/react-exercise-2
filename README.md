@@ -12,7 +12,7 @@ npm install
 npm start
 ```
 
-3.启动Json Server http://localhost:3000
+3.启动Json Server http://localhost:3001
 ```
 yarn server
 ```
