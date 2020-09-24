@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Header from './components/header/Header';
 import Phones from './components/phones/Phones';
 import './App.scss';
-// import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   state = {
     categories: [],
+    productsNumber: 0,
   };
 
   componentDidMount() {
@@ -52,12 +52,27 @@ class App extends Component {
     });
   };
 
+  handleAddProduct = () => {
+    const { state } = this;
+    const { productsNumber } = state;
+
+    this.setState({
+      ...state,
+      productsNumber: productsNumber + 1,
+    });
+  };
+
   render() {
     return (
       <main className="app">
-        <Header />
+        <Header productsNumber={this.state.productsNumber} />
         {this.state.categories.map((item, index) => (
-          <Phones key={index} type={item.type} products={item.products} />
+          <Phones
+            key={index}
+            type={item.type}
+            products={item.products}
+            addProducts={this.handleAddProduct}
+          />
         ))}
       </main>
     );

@@ -5,12 +5,18 @@ import './Phones.css';
 
 class Phones extends Component {
   render() {
+    const { type, products, addProducts } = this.props;
     return (
       <section className="phones">
-        <h2>{this.props.type}</h2>
+        <h2>{type}</h2>
         <section className="phone-list">
-          {this.props.products.map((item, index) => (
-            <Phone key={index} name={item.name} price={item.price} />
+          {products.map((item, index) => (
+            <Phone
+              key={index}
+              name={item.name}
+              price={item.price}
+              addProducts={addProducts}
+            />
           ))}
         </section>
       </section>
@@ -21,6 +27,7 @@ class Phones extends Component {
 Phones.propTypes = {
   type: PropTypes.string.isRequired,
   products: PropTypes.array.isRequired,
+  addProducts: PropTypes.func.isRequired,
 };
 
 export default Phones;

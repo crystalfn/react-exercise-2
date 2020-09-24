@@ -5,13 +5,15 @@ import './Phone.css';
 
 class Phone extends Component {
   render() {
+    const { name, price, addProducts } = this.props;
+
     return (
       <section className="phone">
-        <h3>{this.props.name}</h3>
+        <h3>{name}</h3>
         <img src={product_image_placeholder} />
         <footer>
-          <span>{this.props.price}</span>
-          <button>add to cart</button>
+          <span>{price}</span>
+          <button onClick={addProducts}>add to cart</button>
         </footer>
       </section>
     );
@@ -21,6 +23,7 @@ class Phone extends Component {
 Phone.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
+  addProducts: PropTypes.func.isRequired,
 };
 
 export default Phone;
