@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/header/Header';
 import Phones from './components/phones/Phones';
 import './App.scss';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   state = {

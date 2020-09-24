@@ -1,0 +1,18 @@
+.phones {
+  height: 300px;
+  padding: 10px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.phones h2 {
+  align-self: flex-start;
+}
+
+.phone-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

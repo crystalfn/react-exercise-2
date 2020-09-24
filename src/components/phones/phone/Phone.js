@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import product_image_placeholder from '../../../assets/product_image_placeholder.png';
 import PropTypes from 'prop-types';
+import './Phone.css';
 
 class Phone extends Component {
   render() {

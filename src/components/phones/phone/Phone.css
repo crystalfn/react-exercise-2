@@ -1,0 +1,47 @@
+.phone {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone img {
+  width: 170px;
+  height: 200px;
+}
+
+.phone h3,
+.phone img,
+.phone footer {
+  align-self: flex-start;
+}
+
+.phone h3 {
+  line-height: 40px;
+}
+
+.phone footer {
+  height: 50px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone footer span {
+  font-weight: 600;
+}
+
+.phone footer button {
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  width: 90px;
+  height: 25px;
+  color: #fff;
+  background-color: #096ee3;
+}
+
+.phone footer button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
