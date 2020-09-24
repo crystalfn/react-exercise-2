@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/header/Header';
+import Phones from './components/phones/Phones';
 import './App.scss';
 
 class App extends Component {
@@ -54,6 +55,9 @@ class App extends Component {
     return (
       <main className="app">
         <Header />
+        {this.state.categories.map((item, index) => (
+          <Phones key={index} type={item.type} products={item.products} />
+        ))}
       </main>
     );
   }
